@@ -29,8 +29,8 @@ const [isAdmin] = useAdmin();
     );
 
     return (
-        <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-xl">
-            {/* ... (navbar-start and navbar-center remain the same) ... */}
+        <div className="navbar fixed z-10 bg-opacity-30 bg-white text-black max-w-screen-xl">
+       
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -42,7 +42,7 @@ const [isAdmin] = useAdmin();
                         {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl uppercase">EvenTech</a>
+                <Link to="/" className='text-3xl font-bold'>EvenTech</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
