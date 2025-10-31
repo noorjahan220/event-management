@@ -111,7 +111,7 @@ const RegistrationForm = ({ event, onClose }) => {
         {/* Form */}
         <form onSubmit={handleSubmit(onSubmit)} className="p-6 bg-base-100">
           <div className="space-y-6">
-            {/* Personal Information */}
+           
             <div>
               <h4 className="font-serif text-xl font-bold text-gray-800 mb-4">Personal Information</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -68,7 +68,6 @@ const Banner = ({ allEvents, searchTerm, setSearchTerm, handleSearch }) => {
                     </div>
                 </div>
 
-                {/* Mobile Image Grid - Show a simpler version on mobile */}
                 <div className="lg:hidden grid grid-cols-2 gap-3 sm:gap-4 h-48 sm:h-64 mt-6">
                     <div className="rounded-lg overflow-hidden shadow-lg">
                         <img src={images[0]} alt="Event 1" className="w-full h-full object-cover"/>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -8,7 +8,7 @@ import useAxiosPublic from '../Hooks/UseAxiosPublic';
 import EventCard from './EventCard';
 import FeaturedEventCard from './FeaturedEventCard';
 
-// Updated CategoryCard with fresh design and glass effect
+
 const CategoryCard = ({ category, onClick, isActive }) => (
     <div 
         className={`card card-compact cursor-pointer group border-2 transition-all duration-500 hover:shadow-2xl overflow-hidden rounded-xl
@@ -21,7 +21,6 @@ const CategoryCard = ({ category, onClick, isActive }) => (
         <div className="card-body justify-end p-4 absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent">
             <div className="text-center transform transition-all duration-500">
                 
-                {/* Glass effect overlay on hover */}
                 <div className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                     <div className="text-center p-6">
                         <h3 className="text-white text-2xl font-bold font-serif mb-2 drop-shadow-2xl">
@@ -37,7 +36,6 @@ const CategoryCard = ({ category, onClick, isActive }) => (
     </div>
 );
 
-// Using the better staticCategories array
 const staticCategories = [
     { name: 'Music', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80' },
     { name: 'Tech', image: 'https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80' },
@@ -45,7 +43,6 @@ const staticCategories = [
     { name: 'Food', image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80' },
 ];
 
-// --- The Main HomePage Component ---
 const HomePage = () => {
     const [allEvents, setAllEvents] = useState([]);
     const [filteredEvents, setFilteredEvents] = useState([]);
@@ -155,7 +152,7 @@ const HomePage = () => {
                 </div>
             </section>
 
-            {/* Category Section */}
+            
             <section className="py-16 lg:py-20 ">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12 lg:mb-16">
