@@ -50,17 +50,18 @@ const RegistrationForm = ({ event, onClose }) => {
 
   return (
     <dialog id="register_modal" className="modal modal-open">
-      <div className="modal-box max-w-2xl p-0 overflow-hidden rounded-2xl shadow-2xl border border-gray-200">
+      <div className="modal-box max-w-2xl p-0 overflow-hidden rounded-2xl shadow-2xl border border-gray-200 max-h-[80vh] overflow-y-auto">
+        
         {/* Header */}
         <div className="bg-gradient-to-r from-[#F56565] to-[#E53E3E] p-6 text-white">
-          <div className="flex justify-between items-start">
+          <div className="flex items-start justify-between">
             <div>
-              <h3 className="font-serif text-2xl font-bold mb-2">Complete Your Registration</h3>
-              <p className="text-white/90 text-lg font-semibold">{event.title}</p>
+              <h3 className="mb-2 font-serif text-2xl font-bold">Complete Your Registration</h3>
+              <p className="text-lg font-semibold text-white/90">{event.title}</p>
             </div>
             <button 
               onClick={onClose}
-              className="btn btn-ghost btn-circle text-white hover:bg-white/20 transition-all duration-300"
+              className="text-white transition-all duration-300 btn btn-ghost btn-circle hover:bg-white/20"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -70,7 +71,7 @@ const RegistrationForm = ({ event, onClose }) => {
         </div>
 
         {/* Event Summary */}
-        <div className="bg-base-100 p-6 border-b border-gray-100">
+        <div className="p-6 border-b border-gray-100 bg-base-100">
           <div className="flex flex-wrap items-center justify-between gap-4 text-sm">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-[#F56565]/10 rounded-lg flex items-center justify-center">
@@ -83,6 +84,7 @@ const RegistrationForm = ({ event, onClose }) => {
                 <p className="font-semibold text-gray-800">{event.date}</p>
               </div>
             </div>
+
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-[#F56565]/10 rounded-lg flex items-center justify-center">
                 <svg className="w-4 h-4 text-[#F56565]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,6 +96,7 @@ const RegistrationForm = ({ event, onClose }) => {
                 <p className="font-semibold text-gray-800">{event.location}</p>
               </div>
             </div>
+
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-[#F56565]/10 rounded-lg flex items-center justify-center">
                 <svg className="w-4 h-4 text-[#F56565]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,11 +116,12 @@ const RegistrationForm = ({ event, onClose }) => {
           <div className="space-y-6">
            
             <div>
-              <h4 className="font-serif text-xl font-bold text-gray-800 mb-4">Personal Information</h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <h4 className="mb-4 font-serif text-xl font-bold text-gray-800">Personal Information</h4>
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text font-semibold text-gray-700">Full Name</span>
+                    <span className="font-semibold text-gray-700 label-text">Full Name</span>
                   </label>
                   <input 
                     type="text" 
@@ -129,7 +133,7 @@ const RegistrationForm = ({ event, onClose }) => {
 
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text font-semibold text-gray-700">Email</span>
+                    <span className="font-semibold text-gray-700 label-text">Email</span>
                   </label>
                   <input 
                     type="email" 
@@ -143,11 +147,12 @@ const RegistrationForm = ({ event, onClose }) => {
 
             {/* Contact & Booking Details */}
             <div>
-              <h4 className="font-serif text-xl font-bold text-gray-800 mb-4">Booking Details</h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <h4 className="mb-4 font-serif text-xl font-bold text-gray-800">Booking Details</h4>
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text font-semibold text-gray-700">Phone Number</span>
+                    <span className="font-semibold text-gray-700 label-text">Phone Number</span>
                   </label>
                   <input 
                     type="tel" 
@@ -167,8 +172,8 @@ const RegistrationForm = ({ event, onClose }) => {
 
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text font-semibold text-gray-700">Number of Tickets</span>
-                    <span className="label-text-alt text-gray-500">Max: {event.seats}</span>
+                    <span className="font-semibold text-gray-700 label-text">Number of Tickets</span>
+                    <span className="text-gray-500 label-text-alt">Max: {event.seats}</span>
                   </label>
                   <input 
                     type="number" 
@@ -188,9 +193,9 @@ const RegistrationForm = ({ event, onClose }) => {
                 </div>
               </div>
 
-              <div className="form-control mt-4">
+              <div className="mt-4 form-control">
                 <label className="label">
-                  <span className="label-text font-semibold text-gray-700">Payment Method</span>
+                  <span className="font-semibold text-gray-700 label-text">Payment Method</span>
                 </label>
                 <select 
                   {...register("paymentMethod", { required: true })}
@@ -218,7 +223,7 @@ const RegistrationForm = ({ event, onClose }) => {
               <button 
                 type="button" 
                 onClick={onClose}
-                className="btn btn-outline border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 flex-1 py-3 text-lg font-semibold transition-all duration-300"
+                className="flex-1 py-3 text-lg font-semibold text-gray-700 transition-all duration-300 border-gray-300 btn btn-outline hover:bg-gray-50 hover:border-gray-400"
               >
                 Cancel
               </button>
@@ -229,6 +234,7 @@ const RegistrationForm = ({ event, onClose }) => {
                 Confirm Booking
               </button>
             </div>
+
           </div>
         </form>
       </div>
