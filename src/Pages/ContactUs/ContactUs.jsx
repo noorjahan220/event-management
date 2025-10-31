@@ -72,7 +72,7 @@ const ContactUs = () => {
     ];
 
     return (
-        <div className="min-h-screen pb-12 sm:pt-20 lg:pt-24 sm:pb-16">
+        <div className="min-h-screen pt-24 pb-12 lg:pt-32 sm:pb-16">
             <div className="container px-4 mx-auto sm:px-6 lg:px-8">
                 {/* Hero Section */}
                 <div className="mb-16 text-center lg:mb-20">

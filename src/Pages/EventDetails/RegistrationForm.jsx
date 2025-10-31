@@ -223,13 +223,13 @@ const RegistrationForm = ({ event, onClose }) => {
               <button 
                 type="button" 
                 onClick={onClose}
-                className="flex-1 py-3 text-lg font-semibold text-gray-700 transition-all duration-300 border-gray-300 btn btn-outline hover:bg-gray-50 hover:border-gray-400"
+                className="flex-1 py-3 font-semibold text-gray-700 transition-all duration-300 border-gray-300 text-md btn btn-outline hover:bg-gray-50 hover:border-gray-400"
               >
                 Cancel
               </button>
               <button 
                 type="submit" 
-                className="btn bg-[#F56565] border-[#F56565] text-white hover:bg-[#E53E3E] hover:border-[#E53E3E] flex-1 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105"
+                className="btn bg-[#F56565] border-[#F56565] text-white hover:bg-[#E53E3E] hover:border-[#E53E3E] flex-1 py-3 text-md font-semibold transition-all duration-300 hover:scale-105"
               >
                 Confirm Booking
               </button>
