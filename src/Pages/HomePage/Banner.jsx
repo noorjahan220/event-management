@@ -6,6 +6,7 @@ const Banner = ({ allEvents, searchTerm, setSearchTerm, handleSearch }) => {
         allEvents[1]?.image || 'https://i.ibb.co/hR8yXbV/watercolor-workshop.jpg',
         allEvents[2]?.image || 'https://i.ibb.co/DRV3r0Q/tech-conf.jpg',
         allEvents[3]?.image || 'https://i.ibb.co/pPZzYfC/food-fest.jpg',
+        allEvents[4]?.image || 'https://i.ibb.co/pPZzYfC/food-fest.jpg',
     ];
 
     return (
@@ -68,6 +69,9 @@ const Banner = ({ allEvents, searchTerm, setSearchTerm, handleSearch }) => {
                     <div className="row-span-2 overflow-hidden rounded-lg shadow-lg">
                         <img src={images[3]} alt="Event 4" className="object-cover w-full h-full"/>
                     </div>
+                    <div className="row-span-2 overflow-hidden rounded-lg shadow-lg">
+                        <img src={images[4]} alt="Event 5" className="object-cover w-full h-full"/>
+                    </div>
                 </div>
 
                 {/* Mobile Image Grid */}
@@ -83,6 +87,9 @@ const Banner = ({ allEvents, searchTerm, setSearchTerm, handleSearch }) => {
                     </div>
                     <div className="overflow-hidden rounded-lg shadow-lg">
                         <img src={images[3]} alt="Event 4" className="object-cover w-full h-full"/>
+                    </div>
+                    <div className="overflow-hidden rounded-lg shadow-lg">
+                        <img src={images[4]} alt="Event 5" className="object-cover w-full h-full"/>
                     </div>
                 </div>
             </div>

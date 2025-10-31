@@ -10,6 +10,9 @@ import MyBookingsPage from "../Pages/MyBookings/MyBookingsPage";
 import AdminRoute from "./AdminRoute";
 import AddEventPage from "../Pages/AddEvent/AddEventPage";
 import PrivateRoute from "./PrivateRoute";
+import AboutUs from "../Pages/AboutUs/AboutUs";
+import ContactUs from "../Pages/ContactUs/ContactUs";
+import ProfilePage from "../Pages/ProfilePage/ProfilePage";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +31,19 @@ export const router = createBrowserRouter([
         path: "/register",
         element: <Register />,
       },
+      {
+        path: "/aboutUs",
+        element: <AboutUs />,
+
+      },
+      {
+    path: "/contact",
+    element: <ContactUs />
+},
+   {
+    path: "/companyProfile",
+    element: <ProfilePage />
+},
       {
         path: "profile",
         element: <PrivateRoute><UserProfile /></PrivateRoute>,
