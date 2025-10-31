@@ -12,8 +12,7 @@ const Banner = ({ allEvents, searchTerm, setSearchTerm, handleSearch }) => {
     return (
         <section className="container px-4 pt-20 pb-12 mx-auto sm:px-6 sm:pt-24 sm:pb-16 lg:pt-32 lg:pb-24">
             <div className="grid items-center grid-cols-1 gap-8 lg:grid-cols-2 sm:gap-12">
-                
-                
+
                 <div className="text-center lg:text-left">
                     <h1 className="font-serif text-3xl font-bold leading-tight sm:text-4xl md:text-5xl lg:text-7xl text-neutral">
                         Find & Enjoy Your Next Event
@@ -21,20 +20,21 @@ const Banner = ({ allEvents, searchTerm, setSearchTerm, handleSearch }) => {
                     <p className="mt-3 mb-6 text-base text-[#F56565] sm:mt-4 sm:mb-8 sm:text-lg ">
                         From intimate workshops to grand festivals, discover experiences that inspire you. Search and book your tickets effortlessly.
                     </p>
-                    
+
                     {/* Search Form */}
                     <form onSubmit={handleSearch} className="max-w-md mx-auto form-control lg:mx-0">
                         <div className="relative">
                             <input 
                                 type="text" 
                                 placeholder="Search event by name or category..." 
-                                className="input input-bordered w-full pr-12 text-sm sm:text-base focus:outline-none focus:border-[#F56565] focus:ring-2 focus:ring-[#F56565]/20" 
+                                className="input input-bordered w-full pr-20 text-sm sm:text-base focus:outline-none focus:border-[#F56565] focus:ring-2 focus:ring-[#F56565]/20"
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                             />
+
                             <button 
                                 type="submit" 
-                                className="btn btn-ghost btn-circle absolute top-1/2 right-1 -translate-y-1/2 hover:bg-[#F56565]/10"
+                                className="btn btn-ghost btn-circle absolute top-1/2 right-3 -translate-y-1/2 hover:bg-[#F56565]/10 z-50"
                                 aria-label="Search"
                             >
                                 <IoSearch className="text-xl sm:text-2xl text-[#F56565]" />
