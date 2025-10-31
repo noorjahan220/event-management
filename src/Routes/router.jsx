@@ -9,6 +9,7 @@ import EventDetailsPage from "../Pages/EventDetails/EventDetailsPage";
 import MyBookingsPage from "../Pages/MyBookings/MyBookingsPage";
 import AdminRoute from "./AdminRoute";
 import AddEventPage from "../Pages/AddEvent/AddEventPage";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "profile",
-        element: <UserProfile />,
+        element: <PrivateRoute><UserProfile /></PrivateRoute>,
       },
        {
         path: "/events",
@@ -37,11 +38,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/event/:id",
-        element: <EventDetailsPage />
+        element: <PrivateRoute><EventDetailsPage /></PrivateRoute>
       },
        {
             path: 'my-bookings',
-            element: <MyBookingsPage />
+            element: <PrivateRoute><MyBookingsPage /></PrivateRoute>
         },
         {
             path: 'add-event',

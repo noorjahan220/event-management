@@ -1,2 +1,24 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* src/index.css */
+
+/* Custom styles for Swiper Navigation Buttons to match the design */
+.swiper-button-next,
+.swiper-button-prev {
+    @apply bg-transparent border border-secondary/50 rounded-full text-secondary transition-all duration-300;
+    width: 44px !important;
+    height: 44px !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    @apply bg-primary/10 border-primary text-primary;
+}
+
+/* Make the arrow icons smaller */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+}
