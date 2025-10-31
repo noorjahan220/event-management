@@ -69,7 +69,7 @@ const Login = () => {
 
     return (
         <>
-            <div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
+            <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto">
                     <div className="flex flex-col lg:flex-row gap-12 items-center justify-center min-h-[80vh]">
                         
@@ -79,7 +79,7 @@ const Login = () => {
                                 <div>
                                     <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-neutral">
                                         Welcome Back to 
-                                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mt-2">
+                                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F56565] to-[#E53E3E] mt-2">
                                             EvenTech
                                         </span>
                                     </h1>
@@ -91,15 +91,15 @@ const Login = () => {
                                 {/* Features List */}
                                 <div className="space-y-4 max-w-md mx-auto lg:mx-0">
                                     <div className="flex items-center gap-3 text-gray-600">
-                                        <div className="w-2 h-2 bg-primary rounded-full"></div>
+                                        <div className="w-2 h-2 bg-[#F56565] rounded-full"></div>
                                         <span>Access personalized event recommendations</span>
                                     </div>
                                     <div className="flex items-center gap-3 text-gray-600">
-                                        <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                                        <div className="w-2 h-2 bg-[#F56565] rounded-full"></div>
                                         <span>Manage your tickets and bookings</span>
                                     </div>
                                     <div className="flex items-center gap-3 text-gray-600">
-                                        <div className="w-2 h-2 bg-accent rounded-full"></div>
+                                        <div className="w-2 h-2 bg-[#F56565] rounded-full"></div>
                                         <span>Connect with like-minded people</span>
                                     </div>
                                 </div>
@@ -141,7 +141,7 @@ const Login = () => {
                                                 type="email" 
                                                 name="email" 
                                                 placeholder="Enter your email" 
-                                                className="input input-bordered w-full pl-12 focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all duration-300 h-14 text-lg" 
+                                                className="input input-bordered w-full pl-12 focus:outline-none focus:border-[#F56565] focus:ring-2 focus:ring-[#F56565]/20 transition-all duration-300 h-14 text-lg" 
                                                 required 
                                             />
                                             <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
@@ -162,7 +162,7 @@ const Login = () => {
                                                 name='password'
                                                 type="password" 
                                                 placeholder="Enter your password" 
-                                                className="input input-bordered w-full pl-12 focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all duration-300 h-14 text-lg" 
+                                                className="input input-bordered w-full pl-12 focus:outline-none focus:border-[#F56565] focus:ring-2 focus:ring-[#F56565]/20 transition-all duration-300 h-14 text-lg" 
                                                 required 
                                             />
                                             <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
@@ -172,7 +172,7 @@ const Login = () => {
                                             </div>
                                         </div>
                                         <label className="label">
-                                            <a href="#" className="label-text-alt link link-hover text-primary font-semibold">Forgot password?</a>
+                                            <a href="#" className="label-text-alt link link-hover text-[#F56565] font-semibold">Forgot password?</a>
                                         </label>
                                     </div>
 
@@ -180,10 +180,10 @@ const Login = () => {
                                     <div className="form-control mt-8">
                                         <button 
                                             disabled={disabled || isLoading}
-                                            className={`btn btn-primary h-14 text-lg font-semibold transition-all duration-300 ${
+                                            className={`btn bg-[#F56565] border-[#F56565] text-white h-14 text-lg font-semibold transition-all duration-300 ${
                                                 isLoading ? 'loading' : ''
                                             } ${
-                                                !disabled && !isLoading ? 'hover:scale-105 hover:shadow-lg' : ''
+                                                !disabled && !isLoading ? 'hover:bg-[#E53E3E] hover:border-[#E53E3E] hover:scale-105 hover:shadow-lg' : ''
                                             }`}
                                         >
                                             {isLoading ? 'Signing In...' : 'Sign In'}
@@ -202,10 +202,10 @@ const Login = () => {
                                 {/* Sign Up Link */}
                                 <div className="text-center">
                                     <p className="text-gray-600">
-                                        New to EventFlow?{' '}
+                                        New to EvenTech?{' '}
                                         <Link 
                                             to="/register" 
-                                            className="link link-primary font-semibold text-lg hover:text-secondary transition-colors duration-300"
+                                            className="link text-[#F56565] font-semibold text-lg hover:text-[#E53E3E] transition-colors duration-300"
                                         >
                                             Create an account
                                         </Link>

@@ -37,7 +37,7 @@ const Register = () => {
                 ) {
                   reset();
                   Swal.fire({
-                    title: "Welcome to EventFlow!",
+                    title: "Welcome to EvenTech!",
                     text: "Your account has been created successfully!",
                     icon: "success",
                     showClass: {
@@ -115,7 +115,7 @@ const Register = () => {
                 <div>
                   <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-neutral">
                     Join
-                    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mt-2">
+                    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F56565] to-[#E53E3E] mt-2">
                       EvenTech
                     </span>
                   </h1>
@@ -129,19 +129,19 @@ const Register = () => {
                 {/* Benefits List */}
                 <div className="space-y-4 max-w-md mx-auto lg:mx-0">
                   <div className="flex items-center gap-3 text-gray-600">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#F56565] rounded-full"></div>
                     <span>Personalized event recommendations</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-600">
-                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#F56565] rounded-full"></div>
                     <span>Easy ticket booking and management</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-600">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#F56565] rounded-full"></div>
                     <span>Exclusive early access to events</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-600">
-                    <div className="w-2 h-2 bg-info rounded-full"></div>
+                    <div className="w-2 h-2 bg-[#F56565] rounded-full"></div>
                     <span>Connect with like-minded people</span>
                   </div>
                 </div>
@@ -187,7 +187,7 @@ const Register = () => {
                         type="text"
                         {...register("name", { required: true })}
                         placeholder="Enter your full name"
-                        className="input input-bordered w-full pl-12 focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all duration-300 h-14 text-lg"
+                        className="input input-bordered w-full pl-12 focus:outline-none focus:border-[#F56565] focus:ring-2 focus:ring-[#F56565]/20 transition-all duration-300 h-14 text-lg"
                       />
                       <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
                         <svg
@@ -206,7 +206,7 @@ const Register = () => {
                       </div>
                     </div>
                     {errors.name && (
-                      <span className="text-red-600 text-sm mt-2 flex items-center gap-2">
+                      <span className="text-[#F56565] text-sm mt-2 flex items-center gap-2">
                         <svg
                           className="w-4 h-4"
                           fill="currentColor"
@@ -235,7 +235,7 @@ const Register = () => {
                         type="email"
                         {...register("email", { required: true })}
                         placeholder="Enter your email"
-                        className="input input-bordered w-full pl-12 focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all duration-300 h-14 text-lg"
+                        className="input input-bordered w-full pl-12 focus:outline-none focus:border-[#F56565] focus:ring-2 focus:ring-[#F56565]/20 transition-all duration-300 h-14 text-lg"
                       />
                       <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
                         <svg
@@ -254,7 +254,7 @@ const Register = () => {
                       </div>
                     </div>
                     {errors.email && (
-                      <span className="text-red-600 text-sm mt-2 flex items-center gap-2">
+                      <span className="text-[#F56565] text-sm mt-2 flex items-center gap-2">
                         <svg
                           className="w-4 h-4"
                           fill="currentColor"
@@ -288,7 +288,7 @@ const Register = () => {
                           pattern: /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])/,
                         })}
                         placeholder="Create a strong password"
-                        className="input input-bordered w-full pl-12 focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all duration-300 h-14 text-lg"
+                        className="input input-bordered w-full pl-12 focus:outline-none focus:border-[#F56565] focus:ring-2 focus:ring-[#F56565]/20 transition-all duration-300 h-14 text-lg"
                       />
                       <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
                         <svg
@@ -307,7 +307,7 @@ const Register = () => {
                       </div>
                     </div>
                     {errors.password?.type === "required" && (
-                      <p className="text-red-600 text-sm mt-2 flex items-center gap-2">
+                      <p className="text-[#F56565] text-sm mt-2 flex items-center gap-2">
                         <svg
                           className="w-4 h-4"
                           fill="currentColor"
@@ -323,17 +323,17 @@ const Register = () => {
                       </p>
                     )}
                     {errors.password?.type === "minLength" && (
-                      <p className="text-red-600 text-sm mt-2">
+                      <p className="text-[#F56565] text-sm mt-2">
                         Password must be at least 6 characters long.
                       </p>
                     )}
                     {errors.password?.type === "maxLength" && (
-                      <p className="text-red-600 text-sm mt-2">
+                      <p className="text-[#F56565] text-sm mt-2">
                         Password must be less than 20 characters long.
                       </p>
                     )}
                     {errors.password?.type === "pattern" && (
-                      <p className="text-red-600 text-sm mt-2">
+                      <p className="text-[#F56565] text-sm mt-2">
                         Password must include at least one uppercase letter, one
                         lowercase letter, and one number.
                       </p>
@@ -344,9 +344,13 @@ const Register = () => {
                   <div className="form-control mt-8">
                     <button
                       type="submit"
-                      className={`btn btn-primary h-14 text-lg font-semibold transition-all duration-300 ${
+                      className={`btn bg-[#F56565] border-[#F56565] text-white h-14 text-lg font-semibold transition-all duration-300 ${
                         isLoading ? "loading" : ""
-                      } ${!isLoading ? "hover:scale-105 hover:shadow-lg" : ""}`}
+                      } ${
+                        !isLoading
+                          ? "hover:bg-[#E53E3E] hover:border-[#E53E3E] hover:scale-105 hover:shadow-lg"
+                          : ""
+                      }`}
                     >
                       {isLoading ? "Creating Account..." : "Create Account"}
                     </button>
@@ -369,7 +373,7 @@ const Register = () => {
                     Already have an account?{" "}
                     <Link
                       to="/login"
-                      className="link link-primary font-semibold text-lg hover:text-secondary transition-colors duration-300"
+                      className="link text-[#F56565] font-semibold text-lg hover:text-[#E53E3E] transition-colors duration-300"
                     >
                       Sign in here
                     </Link>
